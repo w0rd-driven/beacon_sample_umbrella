@@ -11,7 +11,7 @@ import Config
 
 # Configure Mix tasks and generators
 config :beacon_sample,
-  ecto_repos: [BeaconSample.Repo]
+  ecto_repos: [BeaconSample.Repo, Beacon.Repo]
 
 # Configures the mailer
 #

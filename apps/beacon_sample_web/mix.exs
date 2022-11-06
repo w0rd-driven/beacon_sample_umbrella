@@ -50,7 +50,8 @@ defmodule BeaconSampleWeb.MixProject do
       {:gettext, "~> 0.18"},
       {:beacon_sample, in_umbrella: true},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:beacon, path: "../../../beacon"},
     ]
   end
 

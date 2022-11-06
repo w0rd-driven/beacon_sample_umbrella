@@ -22,4 +22,5 @@ erl_crash.dump
 # Temporary files, for example, from tests.
 /tmp
 
-
+# Elixir Language Server (why isn't this included by now?)
+/.elixir_ls

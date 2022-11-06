@@ -14,11 +14,24 @@ defmodule BeaconSampleWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", BeaconSampleWeb do
-    pipe_through :browser
-
-    get "/", PageController, :index
+  pipeline :beacon do
+    plug BeaconWeb.Plug
   end
+
+  scope "/", BeaconWeb do
+    pipe_through :browser
+    pipe_through :beacon
+
+    live_session :beacon, session: %{"beacon_site" => "my_site"} do
+      live "/beacon/*path", PageLive, :path
+    end
+  end
+
+  # scope "/", BeaconSampleWeb do
+  #   pipe_through :browser
+
+  #   get "/", PageController, :index
+  # end
 
   # Other scopes may use custom stacks.
   # scope "/api", BeaconSampleWeb do

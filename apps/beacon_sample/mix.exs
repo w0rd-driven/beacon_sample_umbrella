@@ -41,7 +41,7 @@ defmodule BeaconSample.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:jason, "~> 1.2"},
       {:swoosh, "~> 1.3"},
-      {:beacon, path: "../../../beacon"},
+      {:beacon, github: "beaconCMS/beacon"}
     ]
   end
 

@@ -51,7 +51,7 @@ defmodule BeaconSampleWeb.MixProject do
       {:beacon_sample, in_umbrella: true},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:beacon, path: "../../../beacon"}
+      {:beacon, github: "beaconCMS/beacon"},
     ]
   end
 

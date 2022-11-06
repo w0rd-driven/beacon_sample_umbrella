@@ -1,5 +1,6 @@
 defmodule BeaconSampleWeb.Router do
   use BeaconSampleWeb, :router
+
   require BeaconWeb.PageManagement
   require BeaconWeb.PageManagementApi
 
